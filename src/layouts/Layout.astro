@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Blog de Franco Silva donde puedes encontrar publicaciones de diferentes temas como programación, productividad, desarrollo personal, anime y manga, lectura de libros, etc."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <link
+      rel="icon"
+      href="/img/logo.png"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <title>1fran_studio | {title}</title>
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/styles.css"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global></style>

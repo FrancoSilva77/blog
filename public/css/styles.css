@@ -1,0 +1,81 @@
+:root {
+  --fuenteHeadings: 'Lato', sans-serif;
+  --fuenteTexto: 'Roboto', sans-serif;
+
+  --colorPrincipal: #232946;
+  --blanco: #fff;
+  --negro: #000;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  min-width: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--fuenteTexto);
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  font-family: var(--fuenteHeadings);
+  font-weight: 900;
+}
+
+p {
+  text-wrap: pretty;
+  font-family: var(--fuenteTexto);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
