@@ -1,0 +1,120 @@
+<header class="header">
+  <!-- TODO : Agregar funcionalidad de marcar el enlace en el que estamos -->
+  <div class="header__contenido contenedor">
+    <h1 class="titulo">Franco Silva</h1>
+
+    <img
+      class="icono-menu"
+      src="/img/icon-menu.svg"
+      alt="icono menu"
+    />
+
+    <nav class="navegacion">
+      <a
+        class="navegacion__link"
+        href=""
+        >Inicio</a
+      >
+      <a
+        class="navegacion__link"
+        href=""
+        >Blog</a
+      >
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    background-color: var(--colorPrincipal);
+  }
+
+  .header__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .header__contenido {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .titulo {
+    margin: 0;
+    color: var(--blanco);
+  }
+  /*  **
+  Todo: Agregar / Mejorar el menú de enlace
+  */
+
+  .icono-menu {
+    color: var(--blanco);
+    width: 5rem;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    .icono-menu {
+      display: none;
+    }
+  }
+
+  .navegacion {
+    opacity: 0;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    transition: all 0.3s;
+  }
+
+  .navegacion__mostrar {
+    opacity: 1;
+    height: 100%;
+    transition: all 0.3s;
+  }
+
+  @media (min-width: 768px) {
+    .navegacion {
+      opacity: 1;
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+
+  .navegacion__link {
+    font-size: 2.2rem;
+    color: var(--blanco);
+  }
+
+  .navegacion__link:hover {
+    color: var(--colorPrincipal);
+    background-color: var(--blanco);
+    padding: 0.5rem 2rem;
+  }
+</style>
+
+<script>
+  const menuIcon = document.querySelector('.icono-menu');
+  const navegacion = document.querySelector('.navegacion');
+  const cerrarMenu = document.querySelector('.cerrar-menu');
+
+  menuIcon.addEventListener('click', function () {
+    navegacion.classList.toggle('navegacion__mostrar');
+  });
+
+  const anchoPantalla = document.body.clientWidth;
+
+  window.addEventListener('resize', function () {
+    const anchoPantalla = document.body.clientWidth;
+    if (anchoPantalla >= 768) {
+      navegacion.classList.remove('navegacion__mostrar');
+    }
+  });
+</script>
