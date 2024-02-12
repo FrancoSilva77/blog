@@ -1,0 +1,63 @@
+<div class="contenedor about">
+  <div class="about__info">
+    <h2 class="about__heading">Sobre mi</h2>
+    <p class="about__descripcion">
+      Soy alguien a quien le gusta la tecnología, leer, escribir, la
+      productividad,deporte, crear cosas, etc. !!
+    </p>
+  </div>
+
+  <img
+    src="/img/foto.jpeg"
+    alt="Imagen Franco Silva"
+    class="about__img"
+  />
+</div>
+
+<style>
+  .about {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .about {
+      flex-direction: row;
+    }
+  }
+
+  .about__heading {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .about__heading {
+      text-align: left;
+    }
+  }
+
+  .about__descripcion {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 2.4rem;
+  }
+
+  @media (min-width: 768px) {
+    .about__descripcion {
+      text-align: left;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .about__info {
+      padding: 0 15rem;
+    }
+  }
+
+  .about__img {
+    max-width: 40rem;
+    width: 100%;
+  }
+</style>
